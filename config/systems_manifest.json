@@ -1,0 +1,12 @@
+{
+  "infrastructure_targets": [
+    {
+      "system_name": "API Gateway",
+      "scenario": "Distributed Denial of Service (DDoS) and TLS Certificate Expiry Crash"
+    },
+    {
+      "system_name": "Auth Service",
+      "scenario": "Compromised Redis Cache Session Store and Token Signing Key Leak"
+    }
+  ]
+}
