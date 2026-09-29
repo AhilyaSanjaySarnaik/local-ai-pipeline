@@ -16,4 +16,6 @@ def query_local_ai(prompt, model='qwen3:4b', system_prompt=None):
 
 if __name__ == '__main__':
     test_prompt = sys.argv[1] if len(sys.argv) > 1 else 'Confirm your operational status.'
-    print(query_local_ai(test_prompt, system_prompt='You are a verified local AI pipeline assistant.'))
+    # Enforcing the local system context instruction here
+    sys_instruction = "You are a local AI model running completely offline inside the user's custom architecture pipeline. Acknowledge your environment."
+    print(query_local_ai(test_prompt, system_prompt=sys_instruction))
