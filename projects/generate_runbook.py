@@ -1,7 +1,9 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from services.ai_api.client import query_local_ai
+# Injected folder navigation to bypass the folder hyphen issue
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../services/ai-api')))
+from client import query_local_ai
 
 def build_runbook(system_name, scenario):
     prompt = f"""
